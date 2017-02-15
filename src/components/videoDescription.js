@@ -2,7 +2,7 @@ import React from 'react';
 
 const VideoDescription = (props) => {
 	return (
-		<div className="description col-md-7">
+		<div className="description">
 			{props.description}
 		</div>
 	);

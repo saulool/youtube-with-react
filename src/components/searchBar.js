@@ -20,10 +20,12 @@ class SearchBar extends Component {
 
 	render() {
 		return (
-			<form className="form-inline search-form" onSubmit={this.onSubmit.bind(this)}>
-				<input className="form-control input-lg search-field" placeholder="Search" onChange={event => this.onChange(event.target.value)} />
-				<button type="submit" className="btn btn-lg btn-danger search-button">Search</button>
-			</form>
+			<div className="col-md-12 search-container">
+				<form className="form-inline search-form" onSubmit={this.onSubmit.bind(this)}>
+					<input className="form-control input-lg search-field" placeholder="Search" onChange={event => this.onChange(event.target.value)} />
+					<button type="submit" className="btn btn-lg btn-danger search-button">Search</button>
+				</form>
+			</div>
 		);
 	}	
 }

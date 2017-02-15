@@ -7,7 +7,7 @@ const VideoSuggestionsList = (props) => {
 	});
 
 	return (
-		<ul className="suggestions col-md-5">
+		<ul className="suggestions">
 			{suggestions}
 		</ul>
 	);

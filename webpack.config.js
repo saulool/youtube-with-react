@@ -16,9 +16,9 @@ module.exports = {
   module: {
     loaders: [
 		{
-			test: /\.scss$|.css$/,
-			loaders: extractSCSS.extract(["css-loader", "sass-loader"])
-		},		
+      test: /\.scss$|.css$/,
+      loaders: extractSCSS.extract(["css-loader", "sass-loader"])
+    },
 		{ 
 			test: /.jpe?g$|.gif$|.png$|.svg$|.woff$|.woff2$|.ttf$|.eot$/,
 			loader: "url-loader" 
@@ -41,11 +41,11 @@ module.exports = {
     new webpack.optimize.CommonsChunkPlugin({
     	names: ['vendor', 'manifest']
     }),
-	new webpack.ProvidePlugin({   
-        jQuery: 'jquery',
-        $: 'jquery',
-        jquery: 'jquery'
-    })
+  	new webpack.ProvidePlugin({   
+          jQuery: 'jquery',
+          $: 'jquery',
+          jquery: 'jquery'
+      })
   ],
 	devServer: {
 		contentBase: "./dist"

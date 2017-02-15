@@ -23,8 +23,7 @@ class Player extends Component {
 
 	render() {
 		return (
-			<div className="col-md-7">
-				{this.props.video}
+			<div>
 				<iframe id="player" width="100%" height="360" src={`https://www.youtube.com/embed/${this.props.video}?enablejsapi=1`} frameBorder="0"></iframe>
 			</div>
 		);
