@@ -24,7 +24,7 @@ class Player extends Component {
 	render() {
 		return (
 			<div>
-				<iframe id="player" width="100%" height="360" src={`https://www.youtube.com/embed/${this.props.video}?enablejsapi=1`} frameBorder="0"></iframe>
+				<iframe id="player" className="player" width="100%" height="360" src={`https://www.youtube.com/embed/${this.props.video}?enablejsapi=1`} frameBorder="0"></iframe>
 			</div>
 		);
 	}

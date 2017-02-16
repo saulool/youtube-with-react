@@ -11,27 +11,32 @@ module.exports = {
   },
   output: {
   	path: path.resolve(__dirname, 'dist'),
-    filename: '[name].js'
+    filename: '[name].[chunkhash].js'
   },
   module: {
     loaders: [
-		{
-      test: /\.scss$|.css$/,
-      loaders: extractSCSS.extract(["css-loader", "sass-loader"])
-    },
-		{ 
-			test: /.jpe?g$|.gif$|.png$|.svg$|.woff$|.woff2$|.ttf$|.eot$/,
-			loader: "url-loader" 
-		},
-		{
-			test: /\.js$/,
-			exclude: /(node_modules|bower_components)/,
-			loader: 'babel-loader',
-			query: {
-				plugins: ['transform-runtime'],
-				presets: ['es2015', 'stage-0', 'react']
-			}
-		}
+      {
+        test: /\.scss$|.css$/,
+        loaders: extractSCSS.extract(["css-loader", "sass-loader"])
+      },
+      {
+        test: /\.scss$/,
+        exclude: /(node_modules|bower_components)/, 
+        loaders: ["sasslint-loader"]
+      },
+  		{ 
+  			test: /.jpe?g$|.gif$|.png$|.svg$|.woff$|.woff2$|.ttf$|.eot$/,
+  			loader: "url-loader" 
+  		},
+  		{
+  			test: /\.js$/,
+  			exclude: /(node_modules|bower_components)/,
+  			loader: 'babel-loader',
+  			query: {
+  				plugins: ['transform-runtime'],
+  				presets: ['es2015', 'stage-0', 'react']
+  			}
+  		}
     ]
   },
   plugins: [
