@@ -67,11 +67,20 @@ body {
 				width: 120px;
 			}
 
-			.video-title {
+			.video-info {
 				padding: 0px 10px;
 				display: inline-block;
 				width: calc(100% - 120px);
 				vertical-align: middle;
+			
+				.video-title {
+					display: block;
+				}
+
+				.video-author {
+					display: block;
+					font-weight: bold;
+				}
 			}
 		}
 	}
@@ -88,6 +97,11 @@ body {
 
 		.title {
 			font-size: 20px;
+			margin: 0px 0px 5px;
+		}
+
+		.author {
+			font-size: 18px;
 			margin: 0px 0px 15px;
 		}
 

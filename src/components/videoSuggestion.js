@@ -14,8 +14,11 @@ class VideoSuggestion extends Component {
 		return (
 			<li className="suggestion" onClick={event => this.loadVideo(this.props.video.id.videoId)}>
 				<img className="video-thumbnail" src={this.props.video.snippet.thumbnails.default.url} />
-				<span className="video-title">{this.props.video.snippet.title}</span>
-			</li>	
+				<div className="video-info">
+					<span className="video-title">{this.props.video.snippet.title}</span>
+					<span className="video-author">{this.props.video.snippet.channelTitle}</span>
+				</div>
+			</li>
 		);
 	}
 }
